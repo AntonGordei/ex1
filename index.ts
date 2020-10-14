@@ -37,11 +37,15 @@ const askQuestion = async (
                 numberWorker.setNumber(number)}
             }
         }
-        console.log(`
+        if(numberWorker) {
+            console.log(`
         1) smallest number = ${numberWorker.getSmallestNumber()}
         2) largest number = ${numberWorker.getLargestNumber()}
         3) average of all numbers = ${numberWorker.getAverageNumber()}
         `)
+        } else {
+            console.log(`numbers not found`)
+        }
     } else {
         console.log('Restart script and enter "start"!')
     }

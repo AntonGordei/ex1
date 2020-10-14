@@ -90,7 +90,12 @@ var askQuestion = function (question, defaultValue) {
                 }
                 return [3 /*break*/, 2];
             case 4:
-                console.log("\n        1) smallest number = " + numberWorker.getSmallestNumber() + "\n        2) largest number = " + numberWorker.getLargestNumber() + "\n        3) average of all numbers = " + numberWorker.getAverageNumber() + "\n        ");
+                if (numberWorker) {
+                    console.log("\n        1) smallest number = " + numberWorker.getSmallestNumber() + "\n        2) largest number = " + numberWorker.getLargestNumber() + "\n        3) average of all numbers = " + numberWorker.getAverageNumber() + "\n        ");
+                }
+                else {
+                    console.log("numbers not found");
+                }
                 return [3 /*break*/, 6];
             case 5:
                 console.log('Restart script and enter "start"!');
@@ -101,3 +106,4 @@ var askQuestion = function (question, defaultValue) {
         }
     });
 }); })();
+
